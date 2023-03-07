@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // stored in the global scope, this date will be accessible in entire app
 // you cant change this state directly, with tooklist we can edit
+//saves stages into the local storage until user clear cache
 const initialState = {
   mode: "light",
   user: null,
