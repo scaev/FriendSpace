@@ -40,7 +40,9 @@ Other users can then see your photos.
 
 Prior to project start, wireframing was completed to show ideal project design and flow. The above screenshot details a basic design concept prior to beginning the project.
 
-![ERD]()
+![ERD](https://i.imgur.com/nsV22Yh.png)
+
+
 
 Project planning materials are held in [this](https://trello.com/b/64CyLMsH/time-capsule) public Trello board.
 
@@ -61,7 +63,12 @@ If you'd like to contribute to this project, please fork the repository and crea
 
 ## Icebox Features 🧊
 
--
+- Live Chat feature
+- Saved live chat
+- Real viewed profiles
+- Real impressions
+- Storing photos on a cloud
+- Posting video, location, music 
 
 ## Acknowledgments
 
