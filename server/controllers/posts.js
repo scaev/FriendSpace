@@ -50,7 +50,7 @@ export const getUserPosts = async (req, res) => {
 export const likePost = async (req, res) => {
   try {
     const { id } = req.params; //grabbing post id
-    const { userId } = req.body;
+    const { userId } = req.body; //user is liked it or not
     const post = await Post.findById(id);
     const isLiked = post.likes.get(userId);
 
@@ -62,7 +62,7 @@ export const likePost = async (req, res) => {
 
     const updatedPost = await Post.findByIdAndUpdate(
       id,
-      { likes: post.likes },
+      { likes: post.likes }, //update likes
       { new: true }
     );
 
