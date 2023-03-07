@@ -10,20 +10,23 @@ import {
   persistReducer,
   FLUSH,
   REHYDRATE,
+  PAUSE,
+  PERSIST,
   PURGE,
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { PersistGate } from "redux-persist/integration/react";
+import { PersistGate } from "redux-persist/integration/react"; //saves state after user closes window and saves until user clears cache
+import { middleware } from "yargs";
 
 const persistConfig = { key: "root", storage, version: 1 };
-const peristedReducer = persistReducer(persistConfig, authReducer);
+const persistReducer = persistReducer(persistConfig, authReducer);
 const store = configureStore({
   reducer: persistReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoreActions: [FLUSH, REHYDRATE, PURGE, REGISTER],
+        ignoredActions: { FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER },
       },
     }),
 });
